@@ -5,6 +5,12 @@ Fork Notice
 
 This is a fork of the `parcel-plugin-transcrypt` by doconix. It's modified by [Ken Kinder](https://kkinder.com/) to not have logging errors on recent versions of Parcel. I couldn't find a repo for the actual project, so I wasn't able to create a pull request.
 
+To use this instead of the default `parcel-plugin-transcrypt`, include the following as a requirement.
+
+`npm install "https://github.com/kkinder/parcel-plugin-transcrypt-forked" --save-dev`
+
+Then use the parcel-plugin-transcrypt plugin as you normally would. Instructions are slightly adapted below.
+
 Code in Python 3. Bundle to Javascript.
 ===============================================
 *Adds a `Py3 -> Javascript` transpiler to your [Parcel Bundler](https://parceljs.org/) build tool chain.*
@@ -30,7 +36,7 @@ Installation
 1. Create an empty folder, and initialize npm: `npm init`. (all commands are done in a console within your project directory)
 1. Install Parcel: `npm install parcel-bundler --save-dev`
 1. Ensure Parcel runs within your project folder: `npx parcel --help`
-1. Install this plugin: `npm install parcel-plugin-python --save-dev`
+1. Install this plugin: `npm install https://github.com/kkinder/parcel-plugin-transcrypt-forked --save-dev`
 1. Ensure Transcrypt runs within your project folder: `python3 -m transcrypt`
 
 > Parcel automatically discovers the plugin (because of its name prefix in `package.json`), so you don't have to add the plugin to any config files.
@@ -76,7 +82,7 @@ Ensure `package.json` contains the following (your package versions will likely 
 ```json
 "devDependencies": {
     "parcel-bundler": "^1.10.3",
-    "parcel-plugin-python": "^1.0.3"
+    "parcel-plugin-transcrypt-forked": "git+https://github.com/kkinder/parcel-plugin-transcrypt-forked.git",
 }
 ```
 
